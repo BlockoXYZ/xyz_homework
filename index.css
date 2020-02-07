@@ -1,2 +1,53 @@
 /* css를 작성하시면 됩니다. */
 /* 가급적 네이밍을 신경써서 Semantic하게 해주세요 */
+
+body {
+  text-align: center;
+  margin: 35px auto;
+}
+ul {
+  margin: 30px 0;
+  padding: 0;
+  list-style-type: none;
+}
+.container .todoInput .inputBox {
+  display: flex;
+  justify-content: center;
+}
+/* .container .todoList {
+  margin-left: 350px;
+  margin-right: 398px;
+} */
+input {
+  border-style: 1px solid #ced6e0;
+  width: 30%;
+  padding: 14px;
+  border-width: -2px;
+  border-right-width: -2px;
+}
+input:focus {
+  outline: none;
+}
+#addTodoBtn {
+  font-size: 12px;
+  line-height: 40px;
+  color: white;
+  width: 5%;
+  padding: 3px 3px 1px 3px;
+  border-style: 1px solid #6d214f;
+  border-radius: 0 6px 6px 0;
+  background-color: #6d214f;
+  cursor: pointer;
+}
+ul li {
+  display: flex;
+  padding: 20px 0 20px 0;
+  background-color: #dfe4ea;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+ul li.todoChecked {
+  background-color: #2f3542;
+  color: white;
+  text-decoration: line-through;
+}
