@@ -42,12 +42,69 @@ input:focus {
 ul li {
   display: flex;
   padding: 20px 0 20px 0;
-  background-color: #dfe4ea;
+  background-color: #ced6e0;
   border-bottom: 1px solid white;
-  cursor: pointer;
+  border-radius: 7px 7px 0 0;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
 }
-ul li.todoChecked {
+ul li.checked::before {
   background-color: #2f3542;
   color: white;
+  opacity: 0.8;
   text-decoration: line-through;
+}
+.todoBtnBox {
+  position: relative;
+}
+.todoItemText {
+  position: absolute;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px;
+  width: 200px;
+  top: -15px;
+  right: 100px;
+  cursor: pointer;
+  text-align: left;
+}
+.todoItemComplete {
+  position: absolute;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px;
+  width: 25px;
+  top: -15px;
+  left: 147px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+.todoItemEdit {
+  position: absolute;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px;
+  width: 25px;
+  top: -15px;
+  left: 190px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+.todoItemRemove {
+  position: absolute;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px;
+  width: 25px;
+  top: -15px;
+  left: 233px;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
