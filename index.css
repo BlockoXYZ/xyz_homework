@@ -1,110 +1,121 @@
 /* css를 작성하시면 됩니다. */
 /* 가급적 네이밍을 신경써서 Semantic하게 해주세요 */
 
-body {
-  text-align: center;
-  margin: 35px auto;
-}
-ul {
-  margin: 30px 0;
+/* 
+    css reset
+*/
+* {
   padding: 0;
-  list-style-type: none;
+  margin: 0;
+  box-sizing: border-box;
 }
-.container .todoInput .inputBox {
+body {
+  height: 100%;
+  background-color: #dfe4ea;
+}
+
+/* todoHeader css */
+.todoHeader {
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 550;
+  margin: 2rem 0 2rem;
+}
+
+/* todoInput css */
+.todoInput {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-/* .container .todoList {
-  margin-left: 350px;
-  margin-right: 398px;
-} */
-input {
-  border-style: 1px solid #ced6e0;
-  width: 30%;
-  padding: 14px;
-  border-width: -2px;
-  border-right-width: -2px;
-}
-input:focus {
+.todoInput .input {
+  padding: 0.5rem 1rem;
+  height: 50px;
   outline: none;
+  background-color: #ffffff;
+  width: 450px;
+  font-size: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  border: none;
 }
-#addTodoBtn {
-  font-size: 12px;
-  line-height: 40px;
+.addBtn {
+  height: 50px;
+  width: 60px;
+  border-radius: 0 1rem 1rem 0;
+  outline: none;
+  border: none;
+  background-color: #6f1e51;
   color: white;
-  width: 5%;
-  padding: 3px 3px 1px 3px;
-  border-style: 1px solid #6d214f;
-  border-radius: 0 6px 6px 0;
-  background-color: #6d214f;
   cursor: pointer;
 }
-ul li {
+.addButton:hover {
+  opacity: 0.6;
+}
+
+/* todoList css */
+.todoList {
   display: flex;
-  padding: 20px 0 20px 0;
-  background-color: #ced6e0;
-  border-bottom: 1px solid white;
-  border-radius: 7px 7px 0 0;
-  justify-content: space-around;
-  width: 60%;
-  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
 }
-ul li.checked::before {
-  background-color: #2f3542;
-  color: white;
-  opacity: 0.8;
+.item {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #57606f;
+}
+.itemInput {
+  background: none;
+  outline: none;
+  width: 370px;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.itemCheck {
+  width: 40px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.checked {
   text-decoration: line-through;
+  color: #636e72;
 }
-.todoBtnBox {
-  position: relative;
-}
-.todoItemText {
-  position: absolute;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 10px;
-  width: 200px;
-  top: -15px;
-  right: 100px;
-  cursor: pointer;
-  text-align: left;
-}
-.todoItemComplete {
-  position: absolute;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 4px;
-  font-size: 14px;
-  padding: 6px;
-  width: 25px;
-  top: -15px;
-  left: 147px;
-  background-color: rgba(255, 255, 255, 0.9);
+.completeBtn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2f3542;
+  margin: 0 0.5rem;
+  background: none;
+  outline: none;
+  border: none;
   cursor: pointer;
 }
-.todoItemEdit {
-  position: absolute;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 4px;
-  font-size: 14px;
-  padding: 6px;
-  width: 25px;
-  top: -15px;
-  left: 190px;
-  background-color: rgba(255, 255, 255, 0.9);
+.editBtn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2f3542;
+  margin: 0 0.5rem;
+  background: none;
+  outline: none;
+  border: none;
   cursor: pointer;
 }
-.todoItemRemove {
-  position: absolute;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 4px;
-  font-size: 14px;
-  padding: 6px;
-  width: 25px;
-  top: -15px;
-  left: 233px;
-  background-color: rgba(255, 255, 255, 0.9);
+.removeBtn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2f3542;
+  margin: 0 0.2rem;
+  background: none;
+  outline: none;
+  border: none;
   cursor: pointer;
 }

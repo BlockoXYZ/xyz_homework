@@ -1,6 +1,11 @@
 <!--
+작업일 : 2020.02.06 TodoList 작업시작
+작업자 : 최아리
+작업내용 : HTML 구조 및 CSS
+
 2020.02.06 - todolist 프로젝트 시작, HTML, CSS  기본골격,디자인 설계
 2020.02.07 - todolist button click 시 item 추가 및 list 출력,  완료,수정,삭제 onclick 이벤트 test
+2020.02.08 - todolist javascript class로 구조변경을 위해 전체적으로 수정, 1차적 기능구현 완성
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,41 +21,24 @@
     <!-- 여기에다가 만들어주시면 됩니다. -->
     <!-- script 로드는 이미 해두었습니다. -->
     <!-- 추가적인 스크립트 파일을 만들어서 쓰시려면 해당 스크립트 아래로 로드해주세요 -->
-    <!--
-        작업일 : 2020.02.06 TodoList 작업시작
-        작업자 : 최아리
-        작업내용 : HTML 구조 및 CSS
-    -->
-    <div class="container">
-      <!-- ################ -->
-      <!-- H  E  A  D  E  R -->
-      <!-- ################ -->
-      <div class="todoHeader">
-        <h1>TODO LIST</h1>
-      </div>
-      <!-- ################ -->
-      <!-- I   N   P   U  T   -->
-      <!-- ################ -->
-      <div class="todoInput">
-        <div class="inputBox">
-          <input type="text" placeholder="텍스트를 입력해주세요." />
-          <span id="addTodoBtn" onclick="addItem()">추가</span>
-        </div>
-      </div>
-      <!-- ################ -->
-      <!-- L    I    S    T -->
-      <!-- ################ -->
-      <div class="todoList">
-        <!-- !!todo: 일정 추가시, 완료, 수정, 삭제 버튼도 같이 추가되도록 수정할 예정.
-                    -> 2020.02.07 완료, 수정, 삭제버튼 추가 완료.
-                    -> 버튼 동작 되도록 수정 예정.
-        -->
-        <ul id="todoItems">
-          <!-- <li>test</li>
-          <li class="item checked">일정 끝</li> -->
-        </ul>
-      </div>
+
+    <!-- H  E  A  D  E  R -->
+    <div class="todoHeader">
+      <h1>TODO LIST</h1>
     </div>
+    <!-- I   N   P   U  T   -->
+    <div class="todoInput">
+      <input type="text" class="input" placeholder="텍스트를 입력해주세요." />
+      <button class="addBtn">추가</button>
+    </div>
+    <!-- L    I    S    T -->
+    <div class="todoList">
+      <!-- 
+        addBtn 클릭시 list 출력.
+        list 구조는 script에서 생성 -> input(itemInput, edit button click시 input으로 수정), 
+                                   button(complete, edit, remove) -->
+    </div>
+
     <script src="./index.js"></script>
   </body>
 </html>
